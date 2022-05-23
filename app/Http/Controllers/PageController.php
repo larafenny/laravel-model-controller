@@ -11,9 +11,9 @@ class PageController extends Controller
 {
     public function index(){
         $movie = Movie::all();
-        dump($movie);
+        //dump($movie);
         //funzione dump and die
         dd($movie);
-        return view('home');
+        return view('home', compact('movies'));
     }
 }
