@@ -10,10 +10,9 @@ use App\Movie;
 class PageController extends Controller
 {
     public function index(){
-        $movie = Movie::all();
-        //dump($movie);
+        $movies = Movie::all();
         //funzione dump and die
-        dd($movie);
-        return view('home', compact('movies'));
+        //dd($movie);
+        return view('movies', compact('movies'));
     }
 }
